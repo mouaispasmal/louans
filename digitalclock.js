@@ -13,11 +13,8 @@ function clock() {
     let m = tokyoTime.getMinutes();
     let s = tokyoTime.getSeconds();
 
-    let ampm = h < 12 ? 'AM' : 'PM';
+    let ampm = h < 12 ? 'am' : 'pm';
 
-    // Format 12h si tu veux (sinon garde le 24h)
-    // h = h % 12;
-    // h = h ? h : 12;
 
     h = h < 10 ? '0' + h : h;
     m = m < 10 ? '0' + m : m;

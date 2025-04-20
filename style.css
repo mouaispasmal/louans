@@ -1,22 +1,75 @@
 body {
     font-family: "Delicious Handrawn", cursive;
-    background-image: url("./img/gridpurple.png");
-}
-.clock {
-    border: 1px solid #262626;
-    padding: 40px;
-    border-radius: 10px;
-    background-color: #222222;
-    text-align: center;
+    margin: 0;
+    padding: 0;
+    min-height: 45vw;
+    background-color: white;
+    background-image:
+        linear-gradient(#c9c9fa 0.1vw, transparent 0.1vw),
+        linear-gradient(90deg, #c9c9fa 0.1vw, transparent 0.1vw);
+    background-size: 4vw 4vw;
+    overflow: hidden;
 }
 
-
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 2vw;
+}
+.container a {
+    text-decoration: none;
+    color: black;
+    margin: 2vw;
+    font-size: 2vw;
+}
 .clock ul {
     list-style: none;
     display: flex;
-    justify-content: center;
-    font-size: 90px;
-    gap: 15px;
-    color: white;
+    justify-content: start;
+    font-size: 2vw;
+    gap: 5px;
+    color: black;
+    margin: 2vw;
     
+}
+
+.title img {
+    height: 6vw;
+    margin: 1vw;
+}
+.content {
+    display: flex;
+    justify-content: space-around;
+}
+
+.content img {
+    width: 40vw;
+    margin-bottom: 0;
+}
+
+.content h2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+}
+
+.content a {
+    text-decoration: none;
+    color: black;
+}
+.right img {
+    
+}
+footer {
+    align-items: end;
+}
+footer p {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    color: #808080;
+}
+footer a {
+    color: #808080;
+    text-decoration: none;
 }
