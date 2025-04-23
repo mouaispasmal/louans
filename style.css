@@ -2,26 +2,30 @@ body {
     font-family: "Delicious Handrawn", cursive;
     margin: 0;
     padding: 0;
-    min-height: 45vw;
+    min-height: 100vh;
     background-color: white;
     background-image:
         linear-gradient(#c9c9fa 0.1vw, transparent 0.1vw),
         linear-gradient(90deg, #c9c9fa 0.1vw, transparent 0.1vw);
     background-size: 4vw 4vw;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-right: 2vw;
+    width: 100%;
 }
+
 .container a {
     text-decoration: none;
     color: black;
     margin: 2vw;
     font-size: 2vw;
 }
+
 .clock ul {
     list-style: none;
     display: flex;
@@ -30,46 +34,183 @@ body {
     gap: 5px;
     color: black;
     margin: 2vw;
-    
+    padding: 0;
+}
+
+.title {
+    position: relative;
+    text-align: center;
+    color: black;
 }
 
 .title img {
     height: 6vw;
     margin: 1vw;
 }
+
+.centered {
+    font-size: 2vw;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .content {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 8vw;
+    width: 100%;
 }
 
 .content img {
-    width: 40vw;
     margin-bottom: 0;
 }
 
 .content h2 {
     display: flex;
     justify-content: center;
-    margin-top: 0;
+    margin-top: 6vw;
 }
 
 .content a {
     text-decoration: none;
     color: black;
+    font-size: 1.25vw;
 }
-.right img {
-    
+
+#ct1, #ct2 {
+    position: relative;
+    width: 40vw;
+    height: 30vw;
 }
+
+#starp, #starg {
+    width: 100%;
+    height: auto;
+}
+
+#journal {
+    position: absolute;
+    left: 3vw;
+    top: 4vw;
+    width: 35vw;
+    transform: rotate(-10deg);
+}
+
+#enveloppe {
+    position: absolute;
+    left: 4vw;
+    top: 4vw;
+    width: 40vw;
+    transform: rotate(10deg);
+}
+
 footer {
-    align-items: end;
+    width: 100%;
+    margin-top: 5vh;
 }
+
 footer p {
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: center;
     color: #808080;
 }
+
 footer a {
     color: #808080;
     text-decoration: none;
+}
+
+/* Media queries pour différentes tailles d'écran */
+@media screen and (max-width: 768px) {
+    
+     .clock ul {
+        font-size: 4vw;
+    }
+    
+    .container a {
+        font-size: 4vw;
+        margin: 4vw 2vw;
+    }
+    
+    .title img {
+        height: 12vw;
+    }
+    
+    .centered {
+        font-size: 4vw;
+    }
+    
+    .content {
+        flex-direction: column;
+        align-items: center;
+        gap: 15vw;
+    }
+    
+    #ct1, #ct2 {
+        width: 80vw;
+        height: 60vw;
+    }
+    
+    #journal {
+        width: 70vw;
+        left: 5vw;
+        top: 8vw;
+    }
+    
+    #enveloppe {
+        width: 80vw;
+        left: 0;
+        top: 8vw;
+    }
+    
+    .content h2 {
+        font-size: 5vw;
+        margin-top: 6vw;
+    }
+    
+    .content a {
+        font-size: 3vw;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .clock ul {
+        font-size: 6vw;
+    }
+    
+    .container a {
+        font-size: 6vw;
+    }
+    
+    .title img {
+        height: 15vw;
+    }
+    
+    .centered {
+        font-size: 6vw;
+    }
+    
+    #ct1, #ct2 {
+        width: 90vw;
+        height: 70vw;
+    }
+    
+    #journal {
+        width: 80vw;
+        left: 5vw;
+    }
+    
+    #enveloppe {
+        width: 90vw;
+        left: 0;
+    }
+    
+    footer p {
+        flex-direction: column;
+        text-align: center;
+        font-size: 3vw;
+    }
 }
