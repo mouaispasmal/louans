@@ -12,6 +12,50 @@ body {
     
 }
 
+/* Styles pour les décorations d'arrière-plan */
+.background-decoration {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.deco {
+    position: absolute;
+    opacity: 1;
+}
+
+.deco1 {
+    width: 25vw;
+    top: 5vh;
+    left: 5vw;
+    transform: rotate(-15deg);
+}
+
+.deco2 {
+    width: 25vw;
+    bottom: 0vh;
+    right: 5vw;
+    transform: rotate(10deg);
+}
+
+.deco3 {
+    width: 20vw;
+    bottom: 0vh;
+    left: 5vw;
+
+}
+
+.deco4 {
+    width: 15vw;
+    top: 15vh;
+    right: 5vw;
+    
+}
+
 .container {
     display: flex;
     justify-content: space-between;
@@ -52,8 +96,8 @@ body {
 }
 .book {
     position: relative;
-    width: 350px;
-    height: 500px;
+    width: 30vw;
+    height: 40vw;
     transition: transform 0.5s;
 }
 
@@ -113,7 +157,7 @@ button {
     border: none;
     background-color: transparent;
     cursor: pointer;
-    margin: 10px;
+    margin: 5vw;
     transition: transform 0.5s;
 }
 
