@@ -1,0 +1,233 @@
+body {
+    font-family: "Delicious Handrawn", cursive;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: white;
+    background-image:
+        linear-gradient(#c9c9fa 0.1vw, transparent 0.1vw),
+        linear-gradient(90deg, #c9c9fa 0.1vw, transparent 0.1vw);
+    background-size: 4vw 4vw;
+    overflow-x: hidden;
+    
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 2vw;
+    width: 100%;
+}
+
+.container a {
+    text-decoration: none;
+    color: black;
+    margin: 2vw;
+    font-size: 2vw;
+}
+
+.title {
+    position: relative;
+    text-align: center;
+    color: black;
+}
+
+.title img {
+    height: 6vw;
+    margin: 1vw;
+}
+
+.centered {
+    font-size: 2vw;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.book {
+    position: relative;
+    width: 350px;
+    height: 500px;
+    transition: transform 0.5s;
+}
+
+.paper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    perspective: 1500px;
+
+}
+
+.front,
+.back {
+    background-color: #fbf2e8;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+
+.front {
+    z-index: 1;
+    backface-visibility: hidden;
+    border-left: 2px solid #c9c9fa;
+}
+
+.back {
+    z-index: 0;
+}
+
+.front-content,
+.back-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-content {
+    transform: rotateY(180deg)
+}
+
+
+.flipped .front,
+.flipped .back {
+    transform: rotateY(-180deg);
+}
+
+
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.5s;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover i {
+    color: #636363;
+}
+
+i {
+    font-size: 50px;
+    color: gray;
+}
+
+
+#p1 {
+    z-index: 3;
+}
+
+#p2 {
+    z-index: 2;
+}
+
+#p3 {
+    z-index: 1;
+}
+
+
+
+
+.mobile-message {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    background-image:
+        linear-gradient(#c9c9fa 0.1vw, transparent 0.1vw),
+        linear-gradient(90deg, #c9c9fa 0.1vw, transparent 0.1vw);
+    background-size: 4vw 4vw;
+    z-index: 1000;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.mobile-message img {
+    display: none;
+}
+
+.mobile-message h2 {
+    font-size: 7vw;
+    margin-bottom: 15px;
+}
+
+.mobile-message p {
+    font-size: 5vw;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.mobile-message a {
+    text-decoration: none;
+    color: black;
+    border: 2px solid #c9c9fa;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 5vw;
+    background-color: #ffffff;
+    transition: background-color 0.3s;
+}
+
+.mobile-message a:hover {
+    background-color: #c9c9fa;
+}
+
+/*responsive */
+@media screen and (max-width: 768px) {
+    .container a {
+        font-size: 3vw;
+    }
+    
+    .title img {
+        height: 10vw;
+    }
+    
+    .centered {
+        font-size: 3vw;
+    }
+    
+    .book {
+        width: 300px;
+        height: 450px;
+    }
+    
+    i {
+        font-size: 40px;
+    }
+}
+
+/*smartphone */
+@media screen and (max-width: 800px) {
+    #content, .container {
+        display: none;
+    }
+    
+    .mobile-message {
+        display: flex;
+    }
+}
