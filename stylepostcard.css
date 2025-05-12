@@ -1,0 +1,220 @@
+body {
+    font-family: "Delicious Handrawn", cursive;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: white;
+    background-image:
+        linear-gradient(#c9c9fa 0.1vw, transparent 0.1vw),
+        linear-gradient(90deg, #c9c9fa 0.1vw, transparent 0.1vw);
+    background-size: 4vw 4vw;
+    overflow-x: hidden;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 2vw;
+    width: 100%;
+}
+
+.container a {
+    text-decoration: none;
+    color: black;
+    margin: 2vw;
+    font-size: 2vw;
+}
+
+.title {
+    position: relative;
+    text-align: center;
+    color: black;
+}
+
+.title img {
+    height: 6vw;
+    margin: 1vw;
+}
+
+.centered {
+    font-size: 2vw;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem;
+    max-width: 1200px;
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+.card {
+    width: 22em;
+    height: 15em;
+    position: relative;
+    perspective: 1000px;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.card-front {
+    background-color: #fff;
+}
+
+.card-back {
+    background-color: #f8f8f8;
+    transform: rotateY(180deg);
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.card-back p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.overlay-content {
+    position: relative;
+    max-width: 80%;
+    max-height: 80%;
+    transform: scale(0.8);
+    transition: transform 0.3s;
+}
+
+.overlay.active .overlay-content {
+    transform: scale(1);
+}
+
+.enlarged-card {
+    width: 600px;
+    height: 400px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.enlarged-card-front, .enlarged-card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+.enlarged-card-back {
+    background-color: #f8f8f8;
+    transform: rotateY(180deg);
+    padding: 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.enlarged-card-back p {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.close-btn {
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    width: 1em;
+    height: 1em;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 24px;
+    color: #333;
+    z-index: 1000;
+}
+
+.flip-btn {
+    font-family: "Delicious Handrawn", cursive;
+    position: absolute;
+    bottom: -55px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 20px;
+    background-color: #7d6ed4d9;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.flip-btn:hover {
+    background-color: #504689d9;
+}
