@@ -12,7 +12,6 @@ body {
     
 }
 
-/* Styles pour les décorations d'arrière-plan */
 .background-decoration {
     position: fixed;
     width: 100vw;
@@ -93,6 +92,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 80vh;
+
 }
 .book {
     position: relative;
@@ -246,7 +247,14 @@ i {
     .container a {
         font-size: 3vw;
     }
-    
+    #content {
+        width: 100%;
+        min-height: 70vh; /* Hauteur minimale pour assurer l'espace vertical */
+        align-items: center;
+        justify-content: center;
+        flex-direction: row; /* S'assurer que les éléments restent en ligne */
+        padding: 0; /* Retirer le padding si nécessaire */
+    }
     .title img {
         height: 10vw;
     }
@@ -258,6 +266,7 @@ i {
     .book {
         width: 300px;
         height: 450px;
+        margin: 0 auto;
     }
     
     i {
