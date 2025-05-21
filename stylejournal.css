@@ -136,13 +136,19 @@ body {
 
 .front-content,
 .back-content {
-    width: 100%;
+    width: 92%;
     height: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 1em;
 }
-
+.front-content p,
+.back-content p {
+    font-family: "Roboto", sans-serif;
+    text-align: justify;
+}
 .back-content {
     transform: rotateY(180deg)
 }
@@ -209,7 +215,7 @@ i {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 20px;
+    padding: 0;
 }
 
 .mobile-message img {
@@ -249,11 +255,11 @@ i {
     }
     #content {
         width: 100%;
-        min-height: 70vh; /* Hauteur minimale pour assurer l'espace vertical */
+        min-height: 70vh; 
         align-items: center;
         justify-content: center;
-        flex-direction: row; /* S'assurer que les éléments restent en ligne */
-        padding: 0; /* Retirer le padding si nécessaire */
+        flex-direction: row; 
+        padding: 0; 
     }
     .title img {
         height: 10vw;
